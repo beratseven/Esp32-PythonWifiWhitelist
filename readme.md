@@ -38,13 +38,13 @@ Install the required Flask library:
 code
 Bash
 pip install Flask
-Open python_server/server.py in a text editor and change the SECRET_TOKEN to a unique, hard-to-guess value:
+Open flaskserver.py in a text editor and change the SECRET_TOKEN to a unique, hard-to-guess value:
 code
 Python
 # Must be identical to the token in the ESP32 code!
 SECRET_TOKEN = "ThisIsAVerySecretPassword123!"
 2. ESP32 Setup
-Open esp32_wifi_observer/esp32_wifi_observer.ino with the Arduino IDE.
+Open main.ino with the Arduino IDE.
 Fill in the configuration section at the top of the code with your own details:
 code
 C++
@@ -89,8 +89,7 @@ In the Python terminal, you will see that the server has received and logged thi
 code
 Code
 .
-├── main/
-│   └── main.ino  (Arduino Code)
-├── python_server/
-│   └── flaskserver.py              (Python Flask Server)
+└── main.ino  (Arduino Code)
+└── flaskserver.py              (Python Flask Server)
 └── README.md
+
